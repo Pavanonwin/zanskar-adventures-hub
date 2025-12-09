@@ -60,16 +60,7 @@ const Footer = () => {
           <div>
             <h4 className="font-display text-lg font-semibold text-foreground mb-4">Contact</h4>
             <ul className="space-y-3 font-body text-muted-foreground">
-              <li>
-                <a
-                  href="https://wa.me/917892250906"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-primary transition-colors"
-                >
-                  +91 78922 50906
-                </a>
-              </li>
+              <li>+91 70062 42758</li>
               <li>Padum, Zanskar Valley</li>
               <li>Ladakh, India - 194401</li>
             </ul>

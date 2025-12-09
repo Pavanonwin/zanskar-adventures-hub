@@ -43,9 +43,7 @@ const Hero = () => {
               Explore Adventures
             </a>
             <a
-              href="https://wa.me/917892250906"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#contact"
               className="px-8 py-4 border-2 border-foreground/30 text-foreground font-body font-semibold rounded-full hover:bg-foreground/10 transition-all duration-300"
             >
               Contact Us
