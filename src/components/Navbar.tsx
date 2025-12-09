@@ -50,9 +50,7 @@ const Navbar = () => {
               </a>
             ))}
             <a
-              href="https://wa.me/917892250906"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#contact"
               className="px-6 py-2.5 bg-primary text-primary-foreground font-body font-semibold text-sm rounded-full hover:shadow-glow transition-all duration-300 hover:scale-105"
             >
               Book Now
@@ -83,9 +81,8 @@ const Navbar = () => {
                 </a>
               ))}
               <a
-                href="https://wa.me/917892250906"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#contact"
+                onClick={() => setIsMobileMenuOpen(false)}
                 className="mt-2 px-6 py-3 bg-primary text-primary-foreground font-body font-semibold text-sm rounded-full text-center"
               >
                 Book Now

@@ -104,9 +104,7 @@ const Adventures = () => {
 
                 {/* CTA */}
                 <a
-                  href="https://wa.me/917892250906"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="#contact"
                   className="inline-flex items-center gap-2 font-body font-semibold text-primary hover:text-primary/80 transition-colors group/link"
                 >
                   Book This Adventure
