@@ -34,7 +34,7 @@ const Navbar = () => {
           <a href="#home" className="flex items-center gap-3 group">
             <Mountain className="h-8 w-8 text-primary transition-transform duration-300 group-hover:scale-110" />
             <span className="font-display text-2xl font-bold text-foreground">
-              Zanskar<span className="text-primary">Trails</span>
+              Zanskar<span className="text-primary">Tourism</span>
             </span>
           </a>
 

@@ -42,7 +42,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-display text-xl font-semibold text-foreground mb-2">Email Us</h3>
-                  <p className="font-body text-lg font-bold text-foreground mb-2">info@zanskartrails.com</p>
+                  <p className="font-body text-lg font-bold text-foreground mb-2">info@zanskartourism.com</p>
                   <p className="font-body text-sm text-muted-foreground">We'll respond within 24 hours</p>
                 </div>
               </div>
