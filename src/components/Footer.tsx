@@ -16,9 +16,9 @@ const Footer = () => {
           <div className="md:col-span-2">
             <a href="#home" className="flex items-center gap-3 mb-6">
               <Mountain className="h-8 w-8 text-primary" />
-              <span className="font-display text-2xl font-bold text-foreground">
-                Zanskar<span className="text-primary">Trails</span>
-              </span>
+            <span className="font-display text-2xl font-bold text-foreground">
+              Zanskar<span className="text-primary">Tourism</span>
+            </span>
             </a>
             <p className="font-body text-muted-foreground mb-6 max-w-md">
               Your trusted partner for authentic adventures in Zanskar Valley. Experience the untouched beauty of the Himalayas with local experts who know every trail.
@@ -70,7 +70,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-border/30 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="font-body text-sm text-muted-foreground">
-            © {new Date().getFullYear()} ZanskarTrails. All rights reserved.
+            © {new Date().getFullYear()} ZanskarTourism. All rights reserved.
           </p>
           <p className="font-body text-sm text-muted-foreground">
             Crafted with ❤️ for adventure seekers
