@@ -67,6 +67,22 @@ const Contact = () => {
               <p className="font-body text-sm text-muted-foreground">We respond within 2 hours</p>
             </div>
           </div>
+
+          {/* Photo Section */}
+          <div className="mt-16 relative rounded-2xl overflow-hidden">
+            <img
+              src={phobrangImg}
+              alt="Phobrang, Ladakh - stunning mountain landscape"
+              className="w-full h-[400px] object-cover"
+              loading="lazy"
+            />
+            <div className="absolute inset-0 bg-gradient-hero flex items-end p-8">
+              <div>
+                <p className="font-display text-2xl font-bold text-foreground">Phobrang, Ladakh</p>
+                <p className="font-body text-muted-foreground">Experience the breathtaking beauty of Zanskar</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
