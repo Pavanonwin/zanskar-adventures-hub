@@ -1,4 +1,5 @@
 import { Phone, MapPin, Clock, Mail } from 'lucide-react';
+import phobrangImg from '@/assets/phobrang-ladakh.png';
 
 const Contact = () => {
   return (
