@@ -45,70 +45,58 @@ const adventures = [
 
 const Adventures = () => {
   return (
-    <section id="adventures" className="py-24 bg-background">
+    <section id="adventures" className="py-28 bg-background">
       <div className="container mx-auto px-6">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="font-body text-sm uppercase tracking-widest text-primary mb-4 block">
-            Our Experiences
-          </span>
-          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
-            Unforgettable <span className="text-gradient">Adventures</span>
-          </h2>
-          <p className="font-body text-lg text-muted-foreground">
-            From adrenaline-pumping rafting to peaceful monastery visits, we offer curated experiences that showcase the best of Zanskar.
+        <div className="max-w-3xl mb-20">
+          <p className="font-body text-xs uppercase tracking-[0.3em] text-muted-foreground mb-4">
+            OUR EXPERIENCES
           </p>
+          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-normal text-foreground leading-tight">
+            Unforgettable Adventures<br />
+            <span className="italic font-semibold">Await You</span>
+          </h2>
         </div>
 
         {/* Adventures Grid */}
         <div className="grid md:grid-cols-2 gap-8">
-          {adventures.map((adventure, index) => (
+          {adventures.map((adventure) => (
             <div
               key={adventure.id}
-              className="group relative overflow-hidden rounded-2xl bg-gradient-card shadow-card hover:shadow-glow transition-all duration-500"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className="group cursor-pointer"
             >
               {/* Image */}
-              <div className="relative h-64 overflow-hidden">
+              <div className="relative h-80 overflow-hidden mb-6">
                 <img
                   src={adventure.image}
                   alt={adventure.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent" />
-                
-                {/* Icon Badge */}
-                <div className="absolute top-4 left-4 p-3 bg-primary/20 backdrop-blur-sm rounded-xl">
-                  <adventure.icon className="h-6 w-6 text-primary" />
-                </div>
+                <div className="absolute inset-0 bg-foreground/10 group-hover:bg-foreground/5 transition-colors duration-500" />
               </div>
 
               {/* Content */}
-              <div className="p-6 -mt-8 relative">
-                <h3 className="font-display text-2xl font-bold text-foreground mb-3">
-                  {adventure.title}
-                </h3>
-                <p className="font-body text-muted-foreground mb-4 line-clamp-2">
-                  {adventure.description}
-                </p>
-
-                {/* Meta */}
-                <div className="flex items-center gap-4 mb-4">
-                  <span className="px-3 py-1 bg-secondary rounded-full font-body text-xs text-secondary-foreground">
+              <div>
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="font-body text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
                     {adventure.duration}
                   </span>
-                  <span className="px-3 py-1 bg-secondary rounded-full font-body text-xs text-secondary-foreground">
+                  <span className="w-1 h-1 rounded-full bg-muted-foreground" />
+                  <span className="font-body text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
                     {adventure.difficulty}
                   </span>
                 </div>
-
-                {/* CTA */}
+                <h3 className="font-display text-2xl md:text-3xl font-normal text-foreground mb-3">
+                  {adventure.title}
+                </h3>
+                <p className="font-body text-sm text-muted-foreground leading-relaxed mb-4 max-w-md">
+                  {adventure.description}
+                </p>
                 <a
                   href="#contact"
-                  className="inline-flex items-center gap-2 font-body font-semibold text-primary hover:text-primary/80 transition-colors group/link"
+                  className="inline-block font-body text-xs font-medium tracking-[0.15em] uppercase text-foreground border-b border-foreground/30 pb-1 hover:border-foreground transition-colors"
                 >
-                  Book This Adventure
-                  <span className="group-hover/link:translate-x-1 transition-transform">→</span>
+                  Learn More
                 </a>
               </div>
             </div>

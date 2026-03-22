@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, Mountain } from 'lucide-react';
+import { Menu, X, Phone } from 'lucide-react';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -14,46 +14,45 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'Adventures', href: '#adventures' },
-    { name: 'About', href: '#about' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'DESTINATIONS', href: '#adventures' },
+    { name: 'ABOUT', href: '#about' },
+    { name: 'CONTACT', href: '#contact' },
   ];
 
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? 'bg-background/95 backdrop-blur-md shadow-lg'
+          ? 'bg-background/95 backdrop-blur-md shadow-sm border-b border-border'
           : 'bg-transparent'
       }`}
     >
-      <div className="container mx-auto px-6 py-4">
+      <div className="container mx-auto px-6 py-5">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="#home" className="flex items-center gap-3 group">
-            <Mountain className="h-8 w-8 text-primary transition-transform duration-300 group-hover:scale-110" />
-            <span className="font-display text-2xl font-bold text-foreground">
-              Zanskar<span className="text-primary">Tourism</span>
+          <a href="#home" className="group">
+            <span className="font-display text-3xl font-bold tracking-tight text-foreground">
+              ZANSKAR<span className="font-light">TOURISM</span>
             </span>
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-10">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="font-body text-sm font-medium text-foreground/80 hover:text-primary transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
+                className="font-body text-xs font-medium tracking-[0.2em] text-foreground/70 hover:text-foreground transition-colors duration-300"
               >
                 {link.name}
               </a>
             ))}
             <a
-              href="#contact"
-              className="px-6 py-2.5 bg-primary text-primary-foreground font-body font-semibold text-sm rounded-full hover:shadow-glow transition-all duration-300 hover:scale-105"
+              href="tel:+917006242758"
+              className="flex items-center gap-2 font-body text-xs tracking-wider text-foreground/70 hover:text-foreground transition-colors border border-border rounded-none px-5 py-2.5"
             >
-              Book Now
+              <Phone className="h-3.5 w-3.5" />
+              +91 70062 42758
             </a>
           </div>
 
@@ -68,24 +67,24 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 border-t border-border/30 animate-fade-in">
-            <div className="flex flex-col gap-4 pt-4">
+          <div className="md:hidden mt-4 pb-4 border-t border-border animate-fade-in">
+            <div className="flex flex-col gap-4 pt-6">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="font-body text-base font-medium text-foreground/80 hover:text-primary transition-colors"
+                  className="font-body text-xs font-medium tracking-[0.2em] text-foreground/70 hover:text-foreground transition-colors"
                 >
                   {link.name}
                 </a>
               ))}
               <a
-                href="#contact"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="mt-2 px-6 py-3 bg-primary text-primary-foreground font-body font-semibold text-sm rounded-full text-center"
+                href="tel:+917006242758"
+                className="flex items-center gap-2 font-body text-xs tracking-wider text-foreground/70 mt-2"
               >
-                Book Now
+                <Phone className="h-3.5 w-3.5" />
+                +91 70062 42758
               </a>
             </div>
           </div>

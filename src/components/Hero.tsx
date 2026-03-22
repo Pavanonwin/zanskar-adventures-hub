@@ -1,4 +1,4 @@
-import { ChevronDown, MapPin } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
 import heroImage from '@/assets/hero-zanskar.jpg';
 
 const Hero = () => {
@@ -15,64 +15,47 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-6 text-center">
-        <div className="max-w-4xl mx-auto">
-          {/* Location Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-secondary/50 backdrop-blur-sm rounded-full mb-8 animate-fade-up" style={{ animationDelay: '0.2s' }}>
-            <MapPin className="h-4 w-4 text-primary" />
-            <span className="font-body text-sm text-foreground/90">Zanskar Valley, Ladakh</span>
-          </div>
-
-          {/* Main Heading */}
-          <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold text-foreground mb-6 animate-fade-up" style={{ animationDelay: '0.4s' }}>
-            Discover the
-            <span className="block text-gradient">Last Shangri-La</span>
-          </h1>
-
-          {/* Subheading */}
-          <p className="font-body text-lg md:text-xl text-foreground/80 max-w-2xl mx-auto mb-10 animate-fade-up" style={{ animationDelay: '0.6s' }}>
-            Experience the untouched beauty of Zanskar. From thrilling white-water rafting to ancient monasteries, embark on the adventure of a lifetime.
+      <div className="relative z-10 container mx-auto px-6">
+        <div className="max-w-3xl">
+          {/* Eyebrow */}
+          <p className="font-body text-xs uppercase tracking-[0.3em] text-white/70 mb-6 animate-fade-up" style={{ animationDelay: '0.2s' }}>
+            EXPERIENCE ZANSKAR
           </p>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up" style={{ animationDelay: '0.8s' }}>
+          {/* Main Heading */}
+          <h1 className="font-display text-6xl md:text-7xl lg:text-8xl font-normal text-white mb-8 leading-[0.95] animate-fade-up" style={{ animationDelay: '0.4s' }}>
+            Step Into
+            <span className="block font-semibold italic">Eternal Lands</span>
+          </h1>
+
+          {/* Description */}
+          <p className="font-body text-base md:text-lg text-white/80 max-w-lg mb-10 leading-relaxed animate-fade-up" style={{ animationDelay: '0.6s' }}>
+            For those who seek the extraordinary — explore this remote Himalayan paradise of ancient monasteries, thrilling rivers, and boundless adventure.
+          </p>
+
+          {/* CTA */}
+          <div className="animate-fade-up" style={{ animationDelay: '0.8s' }}>
             <a
               href="#adventures"
-              className="px-8 py-4 bg-primary text-primary-foreground font-body font-semibold rounded-full hover:shadow-glow transition-all duration-300 hover:scale-105"
+              className="inline-block px-10 py-4 border border-white/60 text-white font-body text-xs font-medium tracking-[0.2em] uppercase hover:bg-white hover:text-foreground transition-all duration-500"
             >
-              Explore Adventures
+              FIND YOUR JOURNEY
             </a>
-            <a
-              href="#contact"
-              className="px-8 py-4 border-2 border-foreground/30 text-foreground font-body font-semibold rounded-full hover:bg-foreground/10 transition-all duration-300"
-            >
-              Contact Us
-            </a>
-          </div>
-
-          {/* Stats */}
-          <div className="grid grid-cols-3 gap-8 mt-16 max-w-lg mx-auto animate-fade-up" style={{ animationDelay: '1s' }}>
-            <div>
-              <p className="font-display text-3xl md:text-4xl font-bold text-primary">500+</p>
-              <p className="font-body text-sm text-foreground/60 mt-1">Happy Travelers</p>
-            </div>
-            <div>
-              <p className="font-display text-3xl md:text-4xl font-bold text-primary">15+</p>
-              <p className="font-body text-sm text-foreground/60 mt-1">Unique Tours</p>
-            </div>
-            <div>
-              <p className="font-display text-3xl md:text-4xl font-bold text-primary">10+</p>
-              <p className="font-body text-sm text-foreground/60 mt-1">Years Experience</p>
-            </div>
           </div>
         </div>
       </div>
 
+      {/* Slide Counter */}
+      <div className="absolute bottom-24 left-6 md:left-12 z-10 animate-fade-up" style={{ animationDelay: '1s' }}>
+        <span className="font-display text-4xl font-bold text-white">01</span>
+        <span className="font-display text-lg text-white/40">/05</span>
+      </div>
+
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-float">
-        <a href="#adventures" className="flex flex-col items-center gap-2 text-foreground/60 hover:text-primary transition-colors">
-          <span className="font-body text-xs uppercase tracking-widest">Scroll</span>
-          <ChevronDown className="h-5 w-5" />
+        <a href="#adventures" className="flex flex-col items-center gap-2 text-white/50 hover:text-white transition-colors">
+          <span className="font-body text-[10px] uppercase tracking-[0.3em]">Scroll</span>
+          <ChevronDown className="h-4 w-4" />
         </a>
       </div>
     </section>
