@@ -1,4 +1,5 @@
 import { Phone, MapPin, Clock, Mail } from 'lucide-react';
+import phobrangImg from '@/assets/phobrang-ladakh.png';
 
 const Contact = () => {
   return (
@@ -65,6 +66,22 @@ const Contact = () => {
               <Phone className="h-6 w-6 text-primary mx-auto mb-3" />
               <h4 className="font-display font-semibold text-foreground mb-1">Response Time</h4>
               <p className="font-body text-sm text-muted-foreground">We respond within 2 hours</p>
+            </div>
+          </div>
+
+          {/* Photo Section */}
+          <div className="mt-16 relative rounded-2xl overflow-hidden">
+            <img
+              src={phobrangImg}
+              alt="Phobrang, Ladakh - stunning mountain landscape"
+              className="w-full h-[400px] object-cover"
+              loading="lazy"
+            />
+            <div className="absolute inset-0 bg-gradient-hero flex items-end p-8">
+              <div>
+                <p className="font-display text-2xl font-bold text-foreground">Phobrang, Ladakh</p>
+                <p className="font-body text-muted-foreground">Experience the breathtaking beauty of Zanskar</p>
+              </div>
             </div>
           </div>
         </div>
