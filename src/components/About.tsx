@@ -25,48 +25,44 @@ const features = [
 
 const About = () => {
   return (
-    <section id="about" className="py-24 bg-secondary/30">
+    <section id="about" className="py-28 bg-secondary/40">
       <div className="container mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-20 items-start">
           {/* Text Content */}
           <div>
-            <span className="font-body text-sm uppercase tracking-widest text-primary mb-4 block">
-              About Us
-            </span>
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Your Gateway to <span className="text-gradient">Zanskar's Magic</span>
+            <p className="font-body text-xs uppercase tracking-[0.3em] text-muted-foreground mb-4">
+              ABOUT US
+            </p>
+            <h2 className="font-display text-4xl md:text-5xl font-normal text-foreground mb-8 leading-tight">
+              Your Gateway to<br />
+              <span className="italic font-semibold">Zanskar's Magic</span>
             </h2>
-            <p className="font-body text-lg text-muted-foreground mb-6">
+            <p className="font-body text-base text-muted-foreground mb-6 leading-relaxed max-w-lg">
               For over a decade, we've been guiding travelers through the mystical landscapes of Zanskar Valley. Our passion for this remote Himalayan paradise drives us to create authentic, transformative experiences.
             </p>
-            <p className="font-body text-muted-foreground mb-8">
+            <p className="font-body text-sm text-muted-foreground mb-10 leading-relaxed max-w-lg">
               Whether you seek the thrill of Class IV rapids on the Zanskar River, the serenity of ancient monasteries, or the challenge of high-altitude treks, we craft journeys that leave lasting impressions.
             </p>
 
-            {/* CTA */}
             <a
               href="#contact"
-              className="inline-flex items-center gap-3 px-6 py-3 bg-primary text-primary-foreground font-body font-semibold rounded-full hover:shadow-glow transition-all duration-300"
+              className="inline-block px-8 py-3.5 border border-foreground/30 text-foreground font-body text-xs font-medium tracking-[0.2em] uppercase hover:bg-foreground hover:text-background transition-all duration-500"
             >
-              Get In Touch
+              GET IN TOUCH
             </a>
           </div>
 
           {/* Features Grid */}
-          <div className="grid sm:grid-cols-2 gap-6">
-            {features.map((feature, index) => (
-              <div
-                key={feature.title}
-                className="p-6 bg-gradient-card rounded-2xl border border-border/50 hover:border-primary/30 transition-all duration-300 group"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="p-3 bg-primary/10 rounded-xl w-fit mb-4 group-hover:bg-primary/20 transition-colors">
-                  <feature.icon className="h-6 w-6 text-primary" />
+          <div className="grid sm:grid-cols-2 gap-8">
+            {features.map((feature) => (
+              <div key={feature.title} className="group">
+                <div className="p-3 border border-border rounded-sm w-fit mb-5 group-hover:border-primary/50 transition-colors">
+                  <feature.icon className="h-5 w-5 text-primary" />
                 </div>
                 <h3 className="font-display text-xl font-semibold text-foreground mb-2">
                   {feature.title}
                 </h3>
-                <p className="font-body text-sm text-muted-foreground">
+                <p className="font-body text-sm text-muted-foreground leading-relaxed">
                   {feature.description}
                 </p>
               </div>
